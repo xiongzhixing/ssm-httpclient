@@ -1,0 +1,7 @@
+com\soecode\lyf\dao\BookDaoTest.class
+com\soecode\lyf\service\impl\BookServiceImplTest.class
+com\soecode\lyf\BaseTest.class
+com\soecode\lyf\web\BookControllerTest.class
+com\soecode\lyf\dao\AppointmentDaoTest.class
+com\soecode\lyf\util\HttpClientTest.class
+com\soecode\lyf\web\AbstractContextControllerTests.class

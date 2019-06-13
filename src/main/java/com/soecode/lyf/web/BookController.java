@@ -63,6 +63,8 @@ public class BookController {
 		AppointExecution execution = null;
 		System.out.println("qweqwe");
 		System.out.println("123123");
+
+        System.out.println("branch1");
 		try {
 			execution = bookService.appoint(bookId, studentId);
 		} catch (NoNumberException e1) {

@@ -61,6 +61,7 @@ public class BookController {
 			return new Result<AppointExecution>(false, "学号不能为空");
 		}
 		AppointExecution execution = null;
+		System.out.println("qweqwe");
 		try {
 			execution = bookService.appoint(bookId, studentId);
 		} catch (NoNumberException e1) {

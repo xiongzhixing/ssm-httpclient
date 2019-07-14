@@ -39,12 +39,14 @@ public class BookControllerTest extends AbstractContextControllerTests {
 	public void setup() {
 		System.out.println("branch2");
 		this.mockMvc = webAppContextSetup(this.wac).alwaysExpect(status().isOk()).alwaysDo(print()).build();
+		System.out.println("branch1");
 	}
 
 	@Test
 	public void list() throws Exception {
 		System.out.println("branch2");
 		this.mockMvc.perform(get(listUrl)).andExpect(view().name("list"));
+		System.out.println("branch1");
 	}
 
 	@Test
@@ -52,16 +54,19 @@ public class BookControllerTest extends AbstractContextControllerTests {
 		System.out.println("branch2");
 		this.mockMvc.perform(get(detailUrl, bookId)).andExpect(view().name("detail"))
 				.andExpect(model().attributeExists("book"));
+		System.out.println("branch1");
 	}
 
 	@Test
 	public void notExistDetail() throws Exception {
 		this.mockMvc.perform(get(detailUrl, 1100)).andExpect(forwardedUrl("/book/list"));
+		System.out.println("branch1");
 	}
 
 	@Test
 	public void appointTest() throws Exception {
 		this.mockMvc.perform(post(appointUrl, bookId).param("studentId", "1").accept(MediaType.APPLICATION_JSON))
 				.andExpect(content().contentType("application/json;charset=utf-8"));
+		System.out.println("branch1");
 	}
 }

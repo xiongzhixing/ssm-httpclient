@@ -65,5 +65,7 @@ public class BookControllerTest extends AbstractContextControllerTests {
 		this.mockMvc.perform(post(appointUrl, bookId).param("studentId", "1").accept(MediaType.APPLICATION_JSON))
 				.andExpect(content().contentType("application/json;charset=utf-8"));
 		System.out.println("branch1");
+		System.out.println("branch1");
+		System.out.println("branch1");
 	}
 }
